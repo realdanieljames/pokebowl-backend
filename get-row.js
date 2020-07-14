@@ -6,41 +6,24 @@ const pokemon = require('./pokemon.js');
 
 
 
-
-
 // OUR code here.
+
+//[pokemon] has the 2d array with the name in it  
+// what do i want to do with the name from the 2dArray. 
+//i want to display it
+
 const getRow = function(name){
-  const pokeInfo = [];
-  //[pokemon] has the 2d array with the name in it
-  for (const info of pokemon){
-    // console.log(info)
-    if(info.includes(name)){
-      pokeInfo.push(info)
+  for (const pokeInfo of pokemon){
+    if(pokeInfo.includes(name)){
+      return pokeInfo
     }
-
   }
-  return pokeInfo
+  return null
 }
-  
-  
-  // what do i want to do with the name from the 2dArray. 
-  //i want to print put into an pokeCaught array and display it
-  
-  
+
   
 
-
-console.log(getRow('granbull'))
-console.log(getRow('charmander'))
-console.log(getRow('swampert'))
-console.log(getRow('daniel'))
-
-
-
-
-
-
-
+  
 
 ////
 if (typeof getRow === 'undefined') {
